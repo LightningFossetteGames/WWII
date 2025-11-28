@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World War II Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <a href="#start">How Did WWII Start?</a>
+  <a href="#hitler">Adolf Hitler</a>
+  <a href="#countries">Countries Involved</a>
+  <a href="#battles">Major Battles</a>
+  <a href="#holocaust">Holocaust</a>
+  <a href="#end">End of the War</a>
+  <button id="darkModeToggle">Toggle Dark Mode</button>
+</nav>
+
+<div class="content">
+
+  <header>
+    <h1>World War II</h1>
+    <p>A global conflict that shaped modern history (1939–1945)</p>
+  </header>
+
+  <section id="start">
+    <h2>How Did WWII Start?</h2>
+    <img src="images/poland-invasion.jpg" alt="Invasion of Poland" class="img">
+    <p>World War II began on September 1, 1939, when Germany invaded Poland.</p>
+  </section>
+
+  <section id="hitler">
+    <h2>Adolf Hitler</h2>
+    <img src="images/hitler.jpg" alt="Adolf Hitler" class="img">
+    <p>Adolf Hitler was the leader of Nazi Germany. His aggressive expansion led to the war.</p>
+  </section>
+
+  <section id="countries">
+    <h2>Countries Involved</h2>
+    <p>Allied Powers: USA, UK, Soviet Union, China</p>
+    <p>Axis Powers: Germany, Italy, Japan</p>
+  </section>
+
+  <section id="battles">
+    <h2>Major Battles</h2>
+    <ul>
+      <li>Battle of Britain</li>
+      <li>Battle of Stalingrad</li>
+      <li>D-Day: Battle of Normandy</li>
+      <li>Battle of Midway</li>
+    </ul>
+  </section>
+
+  <section id="holocaust">
+    <h2>The Holocaust</h2>
+    <p>The Holocaust was the genocide of six million Jews and millions of others by Nazi Germany.</p>
+  </section>
+
+  <section id="end">
+    <h2>End of the War</h2>
+    <p>The war in Europe ended in May 1945. The war in the Pacific ended after atomic bombs were dropped on Japan in August 1945.</p>
+  </section>
+
+  <section id="timeline">
+    <h2>WWII Timeline</h2>
+    <ul>
+      <li>1939: Germany invades Poland</li>
+      <li>1941: Pearl Harbor attack</li>
+      <li>1944: D-Day invasion</li>
+      <li>1945: War ends in Europe and Pacific</li>
+    </ul>
+  </section>
+
+</div>
+
+<script>
+  // Smooth scrolling
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // Dark mode
+  const toggleBtn = document.getElementById('darkModeToggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+  });
+</script>
+
+</body>
+</html>
